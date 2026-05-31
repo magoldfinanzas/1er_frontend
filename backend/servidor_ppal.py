@@ -78,9 +78,8 @@ if __name__ == '__main__':
     import os
     puerto = int(os.getenv("PORT", "8000"))
     httpd = make_server('', puerto, aplicacion_web)
-    print(f"Servidor PRINCIPAL activo en http://localhost:{puerto}")
-    print("Conectado al módulo: ggal_ypf_solo.py")
-    print("Presiona Ctrl+C para detener")
+    print(f"Servidor PRINCIPAL activo en http://0.0.0.0:{puerto}")
+    print(f"Escuchando conexiones...")
     try:
         httpd.serve_forever()
     except KeyboardInterrupt:
